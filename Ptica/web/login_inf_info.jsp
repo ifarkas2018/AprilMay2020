@@ -43,11 +43,11 @@
                                 &nbsp; &nbsp;
                                 <br/>
                                 <span>
-                                    <h3 class="text-info">Login</h3>
+                                    <h3 class="text-info">Prijava</h3>
                                 </span>
                                 <br/>
                                 <form id="login_inf" name="login_inf" action="login_page.jsp" method="post">
-                                    Please use the following information to log in:
+                                    Molimo Vas koristite sledeće podatke za prijavu:
                                     <br/> 
                                     <br/>
                                     <!-- showing administrator's username and password -->
@@ -56,27 +56,27 @@
                                     </span>
                                     <br />
                                     <ul>
-                                        <li>username: admin</li>
-                                        <li>password: admin</li>    
+                                        <li>korisničko ime: admin</li>
+                                        <li>lozinka: admin</li>    
                                     </ul>
 
                                     <!-- showing employee's username and password -->
                                     <span class="text-info">
-                                        <font size="+2">Employee</font>
+                                        <font size="+2">Zaposleni</font>
                                     </span>
                                     <ul>
-                                        <li>username: ifarkas</li>
-                                        <li>password: Bird2018</li>    
+                                        <li>korisničko ime: ifarkas</li>
+                                        <li>lozinka: Bird2018</li>    
                                     </ul>
                                     
                                     <ul>
-                                        <li class="text-warning">username: @@@@@@@@@@@</li>
-                                        <li class="text-warning">password: @@@@@@@@@@@@</li>    
+                                        <li class="text-warning">korisničko ime: @@@@@@@@@@@</li>
+                                        <li class="text-warning">lozinka: @@@@@@@@@@@@</li>    
                                     </ul>
                                     
                                     <ul>
-                                        <li class="text-warning">username: @@@@@@@@@@@@</li>
-                                        <li class="text-warning">password: @@@@@@@@@@@@</li>    
+                                        <li class="text-warning">korisničko ime: @@@@@@@@@@@@</li>
+                                        <li class="text-warning">lozinka: @@@@@@@@@@@@</li>    
                                     </ul>
                                     
                                     <div class="container">
@@ -88,7 +88,7 @@
                                     </div>
                                     
                                     <!-- adding the Submit button to the form; btn-sm is used for smaller (narrower) size of the control -->
-                                    <button type="submit" id="btnSubmit" class="btn btn-info btn-sm">Login</button>
+                                    <button type="submit" id="btnSubmit" class="btn btn-info btn-sm">Prijava</button>
                                 </form>
                             </div> <!-- end of class="col" -->
                         </div> <!-- end of class="row" --> 

@@ -29,7 +29,7 @@
                     <br /><br />
                     <div> 
                         <!-- horizontally centering the picture using center-image, img-fluid is for responsive image -->
-                        <img src="images/books.png" class="img-fluid center-image" alt="picture of books" title="picture of books"> 
+                        <img src="images/books.png" class="img-fluid center-image" alt="slika sa knjigama" title="slika sa knjigama"> 
                     </div>
                 </div>
                 
@@ -41,28 +41,29 @@
                                 &nbsp; &nbsp;
                                 <br/>
                                 <span class="text-info">
-                                    <h3>About Us</h3>
+                                    <h3>O nama</h3>
                                 </span>
                                 <br/>
-                                <p> 
-                                    Located in the city centre Ptica offers a very warm and friendly atmosphere for the book lovers to
-                                    meet, browse, enjoy a cup of tea or some other beverage and to enjoy the books. 
+                                <p>
+                                    Lanac knjižara Ptica je osnovan 2010 u Beogradu. Knjižara ima veoma širok izbor knjiga različitih žanrova uključujući
+                                    beletristiku, stručnu literaturu, popularnu nauku, umetnost, dečje knjige i sve što poželite u zavisnosti od afiniteta.
+                                </p>
+                                <p>  
+                                    Smeštena u centru grada Ptica ima veoma toplu i prijateljsku atmosferu gde se ljubitelji knjiga sreću i uživaju
+                                    u razgledanju i kupovini knjiga uz šolju kafe ili čaja. 
                                 </p>
                                 <p>
-                                    Opened in 2010 by James Bishop, the bookstore has a very wide variety of books including Fiction &amp; Poetry, 
-                                    Business, Education, Computing &amp; IT, Children's, ...
+                                    Ptica je mesto gde se ljubitelji knjiga sreću da istražuju knjige i da razmenjuju ideje i misli. Naše ljubazno 
+                                    osoblje je uvek tu da odgovori na Vaša pitanja i da pronađu knjige koje Vas zanimaju.
+                                </p>
+                                <p>  
+                                    Ako nemate vremena ili niste u mogućnosti da posetite jednu od naših prodavnica molimo Vas posetite našu veb 
+                                    sajtu, pretražite širok izbor knjiga i poručite knjige na veb sajti ili na telefonu. 
                                 </p>
                                 <p>
-                                    It is a lovely place where in their free time many people like to meet to explore the books and to share their ideas and thoughts. 
-                                    Our friendly staff is always there to answer your questions and to find the books that interest you.
-                                </p>
-                                <p> 
-                                    If you don't have time to visit us in person please check out our web site, browse the books of our wide selection 
-                                    of books, order online or by the phone. 
-                                </p>
-                                <p>
-                                    If you are able to visit us please come and enjoy the store which is very unique and 
-                                    which is a very nice place to find the books you need and which you don't need but would like to read.
+                                    Ako ste u mogućnosti da posetite jednu od naših prodavnica dođite i uživajte u prodavnici sa veoma prijatnom
+                                    atmosferom koja je veoma jedinstvena gde možete naći kjnige koje su Vam potrebne ili knjige koje nisu neophodne ali koje 
+                                    biste hteli da pročitate.
                                 </p>
                             </div> <!-- end of class="col" -->
                         </div> <!-- end of class="row" --> 

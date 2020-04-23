@@ -228,8 +228,8 @@
                                                 // if there is value for the price : show it
                                                 if (sPrice != null) {
                                                     // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
+                                                    sPrice = sPrice.replace('.',','); // replace the decimal . with ,
+                                                    sPrice = PticaMetodi.dodajTacku(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
                                                     out.print(" <b>cena: </b>" + sPrice + " RSD");
                                                 }
                                                 

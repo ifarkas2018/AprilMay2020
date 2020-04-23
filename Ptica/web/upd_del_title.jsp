@@ -55,7 +55,7 @@
             // webpg_name: the name of the page to return to if the user enters the email (subscribe) 
             if (source.equals("Ažuriraj knjigu")) {
                 hSession2.setAttribute("webpg_name", "update_prev.jsp");
-            } else if (source.equals("Izbriši knjigu")) {
+            } else if (source.equals("Brisanje knjige")) {
                 hSession2.setAttribute("webpg_name", "delete_title.jsp");
             }
             // if the user just did do the subscribe, the form on the NEXT web page DOESN'T NEED to show the previous values

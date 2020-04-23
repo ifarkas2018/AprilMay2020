@@ -26,10 +26,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!-- specifying the keywords used for Internet search --> 
-        <meta name="keywords" content="Ptica, Bookstore in Belgrade, Online Bookstore">
+        <meta name="keywords" content="Ptica, Knjižara u Beogradu i Novom Sadu, Online Knjižara, Onlajn Knjižara">
         <!-- meta tag used for specifying the description and the purpose of the web site -->
-        <meta name="description" content="Browse and Shop From the Wide Selection of Books">
-        <meta name="author" content="Ingrid Farkas"> 
+        <meta name="description" content="Razgledajte široki izbor knjiga i uživajte u kupovini sa dostavom do Vaših vrata">
+        <meta name="author" content="Ingrid Farkaš"> 
         <!-- used for making responsive web pages on devices with different screen sizes -->
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
@@ -176,8 +176,8 @@
                                                 <a class="dropdown-item" href="AddSessVar" onclick="cookieFillIn('search_page.jsp')">Pretraga knjiga</a> <!-- Search Book link on the submenu --> 
                                                 <div class="dropdown-divider"></div> <!-- the divider on the drop down menu -->
                                                 <a class="dropdown-item" href="AddSessVar" onclick="cookieFillIn('add_page.jsp')">Nova knjiga</a> <!-- Add Book link on the submenu --> 
-                                                <a class="dropdown-item" href="AddSessVar" onclick="cookieFillIn('update_prev.jsp')">Ažuriraj knjigu</a> <!-- Update Book link on the submenu --> 
-                                                <a class="dropdown-item" href="AddSessVar" onclick="cookieFillIn('delete_title.jsp')">Izbriši knjigu</a> <!-- Delete Book link on the submenu --> 
+                                                <a class="dropdown-item" href="AddSessVar" onclick="cookieFillIn('update_prev.jsp')">Ažuriranje knjige</a> <!-- Update Book link on the submenu --> 
+                                                <a class="dropdown-item" href="AddSessVar" onclick="cookieFillIn('delete_title.jsp')">Brisanje knjige</a> <!-- Delete Book link on the submenu --> 
                                             </div>
                                         </li>
                                 <%
@@ -200,7 +200,7 @@
                                 %>    
                                         <!-- Sign Up link on the navbar -->
                                         <li class="nav-item">
-                                            <a class="nav-link" href="AddSessVar" onclick="cookieFillIn('SignUp')">Napravi Nalog</a>
+                                            <a class="nav-link" href="AddSessVar" onclick="cookieFillIn('SignUp')">Novi nalog</a>
                                         </li>
                                 <% 
                                     }

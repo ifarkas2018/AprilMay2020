@@ -12,8 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Ptica - Subscription</title>
-        
+        <title>Ptica - Newsletter</title>
         <script>
             function setFillIn() {
                 document.cookie = "fill_in=true;"; // should the user return to the form he was on before subscribing the fill_in should be true
@@ -30,7 +29,7 @@
                     <br /><br />
                     <div> 
                         <!-- horizontally centering the picture using center-image, img-fluid is for responsive image -->
-                        <img src="images/books.png" class="img-fluid center-image" alt="picture of books" title="picture of books"> 
+                        <img src="images/books.png" class="img-fluid center-image" alt="slika sa knjigama" title="slika sa knjigama"> 
                     </div>
                 </div>
                 
@@ -41,7 +40,7 @@
                             <div class="col">
                                 &nbsp; &nbsp;
                                 <br /><br /><br /><br /><br />
-                                <h3 class="text-info">Newsletter - Prijava</h3>
+                                <h3 class="text-info">Newsletter</h3>
                                 <br /><br /> 
                                 <%  HttpSession hSession = PticaMetodi.returnSession(request);
                                     hSession.setAttribute("subscribe", "true");
@@ -53,13 +52,13 @@
                                     exOccurred = String.valueOf(hSession.getAttribute("db_exoccurred"));
                                     
                                     if (validEmail.equalsIgnoreCase("false"))
-                                        out.print("<span class=\"text-warning\">You entered an invalid email address!</span>");
+                                        out.print("<span class=\"text-warning\">Uneta email adresa nije validna!</span>");
                                     else if (exOccurred.equalsIgnoreCase("exists"))
-                                        out.print("<span class=\"text-warning\">The email you entered already exists in the database!</span>");
+                                        out.print("<span class=\"text-warning\">Uneta email adresa se već koristi!</span>");
                                     else if (exOccurred.equalsIgnoreCase("true"))
-                                        out.print("<span class=\"text-warning\">An error occurred while accessing the database!</span>"); 
+                                        out.print("<span class=\"text-warning\">Došlo je do greške prilikom pristupa bazi podataka!</span>"); 
                                     else {
-                                        out.print("Your email was added successfully to the database.<br />Thank you for subscribing to our newsletter!");
+                                        out.print("Poštovani, uspešno ste se prijavili na našu mejling listu!");
                                     } 
 
                                     if ((page_name.equalsIgnoreCase("null")) || (page_name.equalsIgnoreCase("")) || (page_name == null)) 

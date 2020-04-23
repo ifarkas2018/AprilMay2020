@@ -19,7 +19,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/templatecss.css" type="text/css" rel="stylesheet"/>
-        <title>Ptica</title>
+        <title>Ptica - Novi naslovi</title>
         <%@ include file="header.jsp"%>
         <script>
             function deleteCookie() {
@@ -59,7 +59,7 @@
                             <div class="col">
                                 &nbsp; &nbsp;
                                 <br/>
-                                <h3 class="text-info">Show Book</h3><br/>
+                                <h3 class="text-info">Novi naslovi</h3><br/>
                                 <%
                                     HttpSession hSession = PticaMetodi.returnSession(request);
                                     hSession.setAttribute("webpg_name", "home_book.jsp");
@@ -84,7 +84,7 @@
                                     
                                         if (!(rs.next())) { // there is no information for that book
                                             out.println("<br /><br /><br />");
-                                            out.println("<span class=\"text-warning\">There is no information about the book!</span>");
+                                            out.println("<span class=\"text-warning\">Podaci o ovoj knjizi ne postoje!</span>");
                                             out.println("<br /><br /><br /><br /><br />");
                                         } else {
                                             // show the result in an unordered list
@@ -100,24 +100,24 @@
                                             String sISBN = rs.getString("isbn");
                                             // show the value for the title, author and price
                                             String descr = rs.getString("descr");
-                                            out.print("<li><b>" + sTitle + "</b> by (author) " + sAuthor ); 
+                                            out.print("<li><b>" + sTitle + "</b> od (<b>autora</b>) " + sAuthor ); 
                                             
                                             // if there is value for the price : show it
                                             if (sPrice != null && !sPrice.equalsIgnoreCase("")){
                                                 // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
                                                 sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                                sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
-                                                out.print(" (<b>price: </b>" + sPrice + " RSD)" + "<br/>");
+                                                sPrice = PticaMetodi.dodajTacku(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
+                                                out.print(" (<b>cena: </b>" + sPrice + " RSD)" + "<br/>");
                                             }
                                                 
                                             // if there is an ISBN : show it
                                             if (sISBN != null && !sISBN.equalsIgnoreCase("")) {
-                                                out.print("<br /><b>" + "ISBN: </b>" + sISBN + "<br/>" );
+                                                out.print("<br /><b>" + "Isbn: </b>" + sISBN + "<br/>" );
                                             }
                                                 
                                             // if there is a book description : show it
                                             if (descr != null && !descr.equalsIgnoreCase("")) {
-                                                out.print("<br /><b>" + "Description: </b>" + descr );
+                                                out.print("<br /><b>" + "Opis: </b>" + descr );
                                             }
                                                 
                                             out.print("</li>");
@@ -129,8 +129,8 @@
                                         out.println("</form>");
                                     } catch(Exception e) {
                                         String sMessage = "ERR_DB";
-                                        String sTitle = "Show Book!"; // used for passing the title from one JSP script to the other
-                                        hSession.setAttribute("source_name", "Show Book"); // on which page I am now
+                                        String sTitle = "Novi naslovi"; // used for passing the title from one JSP script to the other
+                                        hSession.setAttribute("source_name", "Novi naslovi"); // on which page I am now
                                         hSession.setAttribute("title", sTitle); // setting the attribute message to the value sTitle
                                         hSession.setAttribute("message", sMessage); // setting the attribute message to the value sMessage
                                         response.sendRedirect("error_succ.jsp"); // redirects the response to error_succ.jsp

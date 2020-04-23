@@ -1,5 +1,5 @@
 /*
- * author: Ingrid Farkas
+ * author: Ingrid Farkaš
  * project: Ptica
  * DelServlet.java : handles running the SQL query (used in upd_del_title.jsp for Delete)
  */
@@ -129,7 +129,7 @@ public class DelServlet extends HttpServlet {
             PreparedStatement preparedStmt = con.prepareStatement(query);
             int rowcount = preparedStmt.executeUpdate(); // executing the query
                         
-            hSession.setAttribute("source_name", "Izbriši knjigu"); // on which page I am now
+            hSession.setAttribute("source_name", "Brisanje knjige"); // on which page I am now
             
             String sMessage; // used for passing the message from one JSP script to the other
             if (rowcount > 0) { // the row was deleted
@@ -158,13 +158,13 @@ public class DelServlet extends HttpServlet {
         HttpSession hSession = PticaMetodi.returnSession(request); // hSession - used to store the information about that user
         String returnStr = delete(hSession);       
         
-        String sTitle = "Izbriši knjigu"; // used for passing the title from one JSP script to the other
+        String sTitle = "Brisanje knjige"; // used for passing the title from one JSP script to the other
         hSession.setAttribute("title", sTitle); // setting the attribute message to the value sTitle
         
         // depending on the returnStr set the session variables (used in error_succ.jsp)
         if (returnStr.equalsIgnoreCase("ERR_NO_AUTHID")) {
             String sMessage = "ERR_NO_AUTHID"; // used for passing the message from one JSP script to the other
-            hSession.setAttribute("source_name", "Izbriši knjigu"); // on which page I am now
+            hSession.setAttribute("source_name", "Brisanje knjige"); // on which page I am now
             hSession.setAttribute("message", sMessage); // setting the attribute message to the value sMessage     
         } else if (returnStr.equalsIgnoreCase("SUCC_DELETE")) {
             String sMessage = "SUCC_DELETE";
@@ -174,7 +174,7 @@ public class DelServlet extends HttpServlet {
             hSession.setAttribute("message", sMessage); // setting the value of the session variable message
         } else { // returnStr is ERR_DELETE
             String sMessage = "ERR_DELETE"; // used for passing the message from one JSP script to the other
-            hSession.setAttribute("source_name", "Izbriši knjigu"); // on which page I am now
+            hSession.setAttribute("source_name", "Brisanje knjige"); // on which page I am now
             hSession.setAttribute("message", sMessage); // setting the attribute message to the value sMessage
         }
         request.getRequestDispatcher("error_succ.jsp").forward(request,response); // redirects the response to error_succ.jsp

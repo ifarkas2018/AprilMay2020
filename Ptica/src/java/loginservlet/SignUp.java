@@ -1,5 +1,5 @@
 /*
- * author: Ingrid Farkas
+ * author: Ingrid Farkaš
  * project: Ptica
  * SignUp.java : when the user clicks on the Sign Up link (on the navbar) this servlet is triggered
  */

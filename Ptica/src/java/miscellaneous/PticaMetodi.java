@@ -1,5 +1,5 @@
 /*
- * author: Ingrid Farkas
+ * author: Ingrid Farkaš
  * project: Ptica
  * PticaMetodi.java : methods used more then once
  */
@@ -144,8 +144,8 @@ public class PticaMetodi {
         return newString;
     }
     
-    // dodajZarez: dodaje tačku u cenu iza hiljadu dinara 
-    public static String dodajZarez(String price) {
+    // dodajTacku: dodaje tačku u cenu iza hiljadu dinara 
+    public static String dodajTacku(String price) {
         if (price.length() > 6) {
             String substrLevi = ""; // part of the string from the left until the .
             String substrDesni = ""; // string from the right hand side of the .

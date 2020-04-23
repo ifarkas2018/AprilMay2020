@@ -21,7 +21,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/templatecss.css" type="text/css" rel="stylesheet"/>
-        <title>Ptica - Ažuriraj knjigu</title>
+        <title>Ptica - Ažuriranje knjige</title>
         
         <%@ include file="header.jsp"%>
     </head>
@@ -255,8 +255,8 @@
                 preparedStmt.execute();
 
                 // Show the page with the message that the book was successfully updated in the database
-                hSession.setAttribute("source_name", "Ažuriraj knjigu"); // on which page I am now
-                String sTitle = "Ažuriraj knjigu"; // used for passing the title from one JSP script to the other
+                hSession.setAttribute("source_name", "Ažuriranje knjige"); // on which page I am now
+                String sTitle = "Ažuriranje knjige"; // used for passing the title from one JSP script to the other
                 String sMessage = "SUCC_UPDATE"; // used for passing the message from one JSP script to the other
                 hSession.setAttribute("message", sMessage);
                 hSession.setAttribute("title", sTitle);
@@ -272,9 +272,9 @@
              
         <%
             } catch(Exception e) { // if an exception occurred set the attributes
-                String sTitle = "Ažuriraj knjigu"; // used for passing the title from one JSP script to the other
+                String sTitle = "Ažuriranje knjige"; // used for passing the title from one JSP script to the other
                 String sMessage = "ERR_UPDATE"; // used for passing the message from one JSP script to the other
-                hSession.setAttribute("source_name", "Ažuriraj knjigu"); // on which page I am now
+                hSession.setAttribute("source_name", "Ažuriranje knjige"); // on which page I am now
                 hSession.setAttribute("message", sMessage); // setting the attribute message to the value sMessage
                 hSession.setAttribute("title", sTitle); // setting the attribute message to the value sTitle
                 response.sendRedirect("error_succ.jsp"); // redirects the response to error_succ.jsp 

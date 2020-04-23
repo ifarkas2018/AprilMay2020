@@ -1,7 +1,7 @@
 <%-- 
     Document   : err_header
     Created on : 20-Feb-2020, 11:59:30
-    Author     : Ingrid Farkas
+    Author     : Ingrid Farkaš
     Project    : Ptica 
 --%>
 
@@ -19,10 +19,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!-- specifying the keywords used for Internet search --> 
-        <meta name="keywords" content="Novi Sad, Knjižara u Novom Sadu, Internet knjižara">
+        <meta name="keywords" content="Knjižara u Beogradu i u Novom Sadu, Internet knjižara">
         <!-- meta tag used for specifying the description and the purpose of the web site -->
-        <meta name="description" content="Browse and Shop From the Wide Selection of Books">
-        <meta name="author" content="Ingrid Farkas"> 
+        <meta name="description" content="Razgledanje širokog izbora knjiga i kupovina knjiga">
+        <meta name="author" content="Ingrid Farkaš"> 
         <!-- used for making responsive web pages on devices with different screen sizes -->
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
@@ -63,9 +63,9 @@
                     <!-- the Bootstrap column takes 4 columns on the large screens, 4 columns on the medium sized screens -->
                     <div class="col-lg-4 col-md-4"> 
                         &nbsp;  
-                        <!-- image that is the logo of the Lesen; alt - the text that is shown if the image can't be loaded (alternate text)
+                        <!-- image that is the logo of the Ptica; alt - the text that is shown if the image can't be loaded (alternate text)
                              title - the text that is shown when the user points at the image -->
-                        <img class="img-logo" src="images/bookshelf.png" alt="Lesen Logo" title="Lesen Logo">  
+                        <img class="img-logo" src="images/bookshelf.png" alt="Logo Ptice" title="Logo Ptice">  
                                     
                         <span class="title-text">Ptica</span> <!-- the title of the bookstore -->
                     </div>

@@ -1,5 +1,5 @@
 /*
- * author: Ingrid Farkas
+ * author: Ingrid Farkaš
  * project: Ptica
  * ShowBook.java : invoked from the index_content.jsp when the user clicks on one of the book images 
  */

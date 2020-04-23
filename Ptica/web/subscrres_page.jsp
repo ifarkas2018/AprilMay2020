@@ -7,11 +7,12 @@
 
 <!-- subscrres_page.jsp - when the user enters the email in the footer and clicks on the Subscribe button SubscrServl.java is invoked which loads this page  -->
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Ptica - Napravi Nalog</title>
+        <title>Ptica - Newsletter</title>
         <!-- link to the external style sheet -->
         <link href="css/templatecss.css" rel="stylesheet" type="text/css">
     </head>

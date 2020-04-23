@@ -1,5 +1,5 @@
 /*
- * author: Ingrid Farkas
+ * author: Ingrid Farkaš
  * project: Ptica
  * SignUpServlet.java : when the user clicks on the Sign Up page on the "Submit" button this servlet is triggered
  */
@@ -32,7 +32,7 @@ public class SignUpServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Ptica - Sign Up</title>");            
+            out.println("<title>Ptica - Novi nalog</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet SignUpServlet at " + request.getContextPath() + "</h1>");
@@ -94,9 +94,9 @@ public class SignUpServlet extends HttpServlet {
             boolean userExists = UserDAO.userExists(userName, password); 
             if (userExists){ 
                 // setting the hSession (to pass them to the page error_succ.jsp) and loading the page error_succ.jsp
-                String sTitle = "Sign Up"; // used for passing the title to the JSP
+                String sTitle = "Novi nalog"; // used for passing the title to the JSP
                 String sMessage = "ERR_USER_EXISTS"; // used for passing the message to the JSP	 
-                hSession.setAttribute("source_name", "Sign Up"); // on which page I am now
+                hSession.setAttribute("source_name", "Novi nalog"); // on which page I am now
                 hSession.setAttribute("message", sMessage); // setting the attribute message to the value of the sMessage
                 hSession.setAttribute("title", sTitle); // setting the attribute title to the value of the sTitle
                 hSession.setAttribute("sign_up", "false" ); // set the session variable sign_up (the user finished signing up)
@@ -107,18 +107,18 @@ public class SignUpServlet extends HttpServlet {
 
                 if (result){ // the new user was added to the database successfully 
                     // setting the hSession (to pass them to the page error_succ.jsp) and loading the page error_succ.jsp
-                    String sTitle = "Sign Up"; // used for passing the title to the JSP
+                    String sTitle = "Novi nalog"; // used for passing the title to the JSP
                     String sMessage = "SUCC_SIGN_UP"; // used for passing the message to the JSP	 
-                    hSession.setAttribute("source_name", "Sign Up"); // on which page I am now
+                    hSession.setAttribute("source_name", "Novi nalog"); // on which page I am now
                     hSession.setAttribute("message", sMessage); // setting the attribute message to the value of the sMessage
                     hSession.setAttribute("title", sTitle); // setting the attribute title to the value of the sTitle
                     hSession.setAttribute("sign_up", "false" ); // set the session variable sign_up (the user finished signing up)
                     response.sendRedirect("error_succ.jsp"); // show the page with the message the new user signed up successfully 
                 } else { // the new user was not added to the database successfully 
                     // setting the hSession (to pass them to the page error_succ.jsp) and loading the page error_succ.jsp
-                    String sTitle = "Sign Up"; // used for passing the title to the JSP
+                    String sTitle = "Novi nalog"; // used for passing the title to the JSP
                     String sMessage = "ERR_SIGN_UP"; // used for passing the message to the JSP	 
-                    hSession.setAttribute("source_name", "Sign Up"); // on which page I am now
+                    hSession.setAttribute("source_name", "Novi nalog"); // on which page I am now
                     hSession.setAttribute("message", sMessage); // setting the attribute message to the value of the sMessage
                     hSession.setAttribute("title", sTitle); // setting the attribute title to the value of the sTitle
                     hSession.setAttribute("sign_up", "false"); // set the session variable sign_up (the user wasn't signed up )

@@ -1,5 +1,5 @@
 /*
- * author: Ingrid Farkas
+ * author: Ingrid Farkaš
  * project: Ptica
  * UserDAO.java : handles running the SQL query (LoginServlet.java - method doPost, SignUpServlet - method doPost)
  */
@@ -44,7 +44,7 @@ public class UserDAO {
                 }
             }
         } catch (Exception ex) {
-            System.out.println("Log In failed: An Exception has occurred! " + ex);
+            System.out.println("Neuspela prijava: Izuzetak: " + ex);
         } 
 	    
         // some exception handling
@@ -107,7 +107,7 @@ public class UserDAO {
            else
                returnVal = false; // the user doesn't exist in the database
         } catch (Exception ex) {
-            System.out.println("Selecting the user with the entered username and password failed: An Exception has occurred! " + ex);    
+            System.out.println("Korisnik sa datim korisničkim imenom i lozinkom ne postoji: Izuzetak: " + ex);    
         } 
         
         // some exception handling
@@ -175,7 +175,7 @@ public class UserDAO {
            pStmt.execute(loginQuery); // executing the query
            returnVal = true; // the new user was added successfully
         } catch (Exception ex) {
-            System.out.println("Adding a new user failed: An Exception has occurred! " + ex);    
+            System.out.println("Nije uspeo unos novog korisnika: Izuzetak: " + ex);    
         } 
         
         // some exception handling
@@ -184,7 +184,7 @@ public class UserDAO {
                 try {
                     pStmt.close(); // closing the PreparedStatement object
                 } catch (Exception e) {
-                    System.out.println("An Exception has occurred! " + e); 
+                    System.out.println("Izuzetak: " + e); 
                 }
                 pStmt = null;
             }
@@ -193,7 +193,7 @@ public class UserDAO {
                 try {
                     currentCon.close(); // closing the Connection object
                 } catch (Exception e) {
-                    System.out.println("An Exception has occurred! " + e); 
+                    System.out.println("Izuzetak: " + e); 
                 }
                 currentCon = null;
             }

@@ -56,6 +56,7 @@
             }
                                    
         </style>
+        
         <title>Ptica</title>
     </head>
     
@@ -91,9 +92,12 @@
                         sAuthor = rs.getString("au_name");
                         // read the price
                         sPrice = rs.getString("price");
+                        // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
+                        sPrice = sPrice.replace('.',','); // replace the desimal . with ,
+                        sPrice = PticaMetodi.dodajTacku(sPrice); // dodajem tačku u cenu iza hiljadu dinara
                     }
                 } catch ( SQLException ex ) {
-                    System.out.println("An exception occured: " + ex.getMessage());
+                    System.out.println("Izuzetak: " + ex.getMessage());
                 }
             }
         %>  
@@ -120,7 +124,7 @@
                                 // assign title, author name, price, isbn and description to the variables
                                 bookInformation(rs);
                             } catch (SQLException e) {
-                                System.out.println("An exception occured: " + e.getMessage());
+                                System.out.println("Izuzetak: " + e.getMessage());
                             }
                         %>
                         
@@ -132,7 +136,7 @@
                                 <!-- @@@@@@@@@@@ DO IT -- change the TITLE and ALT ( in the img tag ) to the title of the book -->
                                 
                                 <!-- pull-left mr-2 is used for spacing between the image and the text -->
-                                <a href="ShowBook"><img src="images/book_1.jpg" class="img-fluid  float-left pull-left mr-2" onclick="createCookieIndex(1)" alt="picture of a book" title="picture of a book"></a>
+                                <a href="ShowBook"><img src="images/book_1.jpg" class="img-fluid  float-left pull-left mr-2" onclick="createCookieIndex(1)" alt="slika sa knjigama" title="slika sa knjigama"></a>
                                 <% if (!sAuthor.equalsIgnoreCase("")) { %>
                                     <span class="pic_text"><%= sAuthor%></span><br/>
                                 <% } 
@@ -140,10 +144,7 @@
                                 %>
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
-                                   if (!sPrice.equalsIgnoreCase("")) {
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
+                                   if (!sPrice.equalsIgnoreCase("")) { 
                                 %>
                                     <span class="pic_text"><%= sPrice %> RSD</span><br/>
                                 <% } %>
@@ -159,9 +160,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) { 
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
                                 %>
                                     <div class="pic_text_below"><%= sPrice %> RSD</div>
                                 <% } %>
@@ -176,7 +174,7 @@
                                 // assign title, author name, price, isbn and description to the variables
                                 bookInformation(rs);
                             } catch (SQLException e) {
-                                System.out.println("An exception occured: " + e.getMessage());
+                                System.out.println("Izuzetak: " + e.getMessage());
                             }
                         %>
                         
@@ -189,7 +187,7 @@
                             <div class="col-lg-11 col-md-11 col-sm-11">
                                 <!-- @@@@@@@@@@@ DO IT -- change the TITLE and ALT (in the img tag) to the title of the book -->
                                 <!-- pull-left mr-2 is used for spacing between the image and the text -->
-                                <a href="ShowBook"><img src="images/bk_2.jpg" class="img-fluid  float-left pull-left mr-2" onclick="createCookieIndex(2)" alt="picture of a book" title="picture of a book"></a>
+                                <a href="ShowBook"><img src="images/bk_2.jpg" class="img-fluid  float-left pull-left mr-2" onclick="createCookieIndex(2)" alt="slika sa knjigama" title="slika sa knjigama"></a>
                                 <% if (!sAuthor.equalsIgnoreCase("")) { %>
                                     <span class="pic_text"><%= sAuthor%></span><br/>
                                 <% } 
@@ -198,9 +196,6 @@
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
                                 %>
                                     <span class="pic_text"><%= sPrice %> RSD</span><br/>
                                 <% } %>
@@ -217,9 +212,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) { 
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
                                 %>
                                     <div class="pic_text_below"><%= sPrice %> RSD</div>
                                 <% } %>
@@ -234,7 +226,7 @@
                                 // assign title, author name, price, isbn and description to the variables
                                 bookInformation(rs);
                             } catch (SQLException e) {
-                                System.out.println("An exception occured: " + e.getMessage());
+                                System.out.println("Izuzetak: " + e.getMessage());
                             }
                         %>
                         
@@ -247,7 +239,7 @@
                                 <!-- @@@@@@@@@@@ DO IT -- change the TITLE and ALT (in the img tag) to the title of the book -->
                                 
                                 <!-- pull-left mr-2 is used for spacing between the image and the text -->
-                                <a href="ShowBook"><img src="images/book_3.jpg" class="img-fluid  float-left pull-left mr-2" onclick="createCookieIndex(3)" alt="picture of a book" title="picture of a book"></a>
+                                <a href="ShowBook"><img src="images/book_3.jpg" class="img-fluid  float-left pull-left mr-2" onclick="createCookieIndex(3)" alt="slika sa knjigama" title="slika sa knjigama"></a>
                                 <% if (!sAuthor.equalsIgnoreCase("")) { %>
                                     <span class="pic_text"><%= sAuthor%></span><br/>
                                 <% } 
@@ -255,10 +247,7 @@
                                 %>
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
-                                   if (!sPrice.equalsIgnoreCase("")) {
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
+                                   if (!sPrice.equalsIgnoreCase("")) { 
                                 %>
                                     <span class="pic_text"><%= sPrice %> RSD</span><br/>
                                 <% } %>
@@ -273,10 +262,7 @@
                                 %>
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% } 
-                                   if (!sPrice.equalsIgnoreCase("")) { 
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
+                                   if (!sPrice.equalsIgnoreCase("")) {  
                                 %>
                                     <div class="pic_text_below"><%= sPrice %> RSD</div>
                                 <% } %>
@@ -291,7 +277,7 @@
                                 // assign title, author name, price, isbn and description to the variables
                                 bookInformation(rs);
                             } catch (SQLException e) {
-                                System.out.println("An exception occured: " + e.getMessage());
+                                System.out.println("Izuzetak: " + e.getMessage());
                             }
                         %>
                         
@@ -303,7 +289,7 @@
                             <div class="col-lg-11 col-md-11 col-sm-11">
                                 <!-- @@@@@@@@@@@ DO IT -- change the TITLE and ALT ( in the img tag ) to the title of the book -->
                                 <!-- pull-left mr-2 is used for spacing between the image and the text -->
-                                <a href="ShowBook"><img src="images/book_4.jpg" class="img-fluid  float-left pull-left mr-2" onclick="createCookieIndex(4)" alt="picture of a book" title="picture of a book"></a>
+                                <a href="ShowBook"><img src="images/book_4.jpg" class="img-fluid  float-left pull-left mr-2" onclick="createCookieIndex(4)" alt="slika sa knjigama" title="slika sa knjigama"></a>
                                 <% if (!sAuthor.equalsIgnoreCase("")) { %>
                                     <span class="pic_text"><%= sAuthor%></span><br/>
                                 <% } 
@@ -312,9 +298,6 @@
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
                                 %>
                                     <span class="pic_text"><%= sPrice %> RSD</span><br/>
                                 <% } %>
@@ -331,9 +314,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) { 
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
                                 %>
                                     <div class="pic_text_below"><%= sPrice %> RSD</div>
                                 <% } %>
@@ -348,7 +328,7 @@
                                 // assign title, author name, price, isbn and description to the variables
                                 bookInformation(rs);
                             } catch (SQLException e) {
-                                System.out.println("An exception occured: " + e.getMessage());
+                                System.out.println("Izuzetak: " + e.getMessage());
                             }
                         %>
                         
@@ -361,7 +341,7 @@
                                 <!-- @@@@@@@@@@@ DO IT -- change the TITLE and ALT ( in the img tag ) to the title of the book -->
                                 
                                 <!-- pull-left mr-2 is used for spacing between the image and the text -->
-                                <a href="ShowBook"><img src="images/book_5.jpg" class="img-fluid  float-left pull-left mr-2" onclick="createCookieIndex(5)" alt="picture of a book" title="picture of a book"></a>
+                                <a href="ShowBook"><img src="images/book_5.jpg" class="img-fluid  float-left pull-left mr-2" onclick="createCookieIndex(5)" alt="slika sa knjigama" title="slika sa knjigama"></a>
                                 <% if (!sAuthor.equalsIgnoreCase("")) { %>
                                     <span class="pic_text"><%= sAuthor%></span><br/>
                                 <% } 
@@ -370,9 +350,6 @@
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
                                 %>
                                     <span class="pic_text"><%= sPrice %> RSD</span><br/>
                                 <% } %>
@@ -387,10 +364,7 @@
                                 %>
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% } 
-                                   if (!sPrice.equalsIgnoreCase("")) { 
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
+                                   if (!sPrice.equalsIgnoreCase("")) {  
                                 %>
                                     <div class="pic_text_below"><%= sPrice %> RSD</div>
                                 <% } %>
@@ -411,7 +385,7 @@
                                 // assign title, author name, price, isbn and description to the variables
                                 bookInformation(rs);
                             } catch (SQLException e) {
-                                System.out.println("An exception occured: " + e.getMessage());
+                                System.out.println("Izuzetak: " + e.getMessage());
                             }
                         %>
                         
@@ -420,7 +394,7 @@
                                 <!-- @@@@@@@@@@@ DO IT -- change the TITLE and ALT ( in the img tag ) to the title of the book -->
                                 
                                 <!-- pull-left mr-2 is used for spacing between the image and the text -->
-                                <a href="ShowBook"><img src="images/book_6.jpg" class="img-fluid  float-left pull-left mr-2" onclick="createCookieIndex(6)" alt="picture of a book" title="picture of a book"></a>
+                                <a href="ShowBook"><img src="images/book_6.jpg" class="img-fluid  float-left pull-left mr-2" onclick="createCookieIndex(6)" alt="slika sa knjigama" title="slika sa knjigama"></a>
                                 <% if (!sAuthor.equalsIgnoreCase("")) { %>
                                     <span class="pic_text"><%= sAuthor%></span><br/>
                                 <% } 
@@ -429,9 +403,6 @@
                                     <span class="pic_text"><b><%= sTitle %></b></span><br/>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
                                 %>
                                     <span class="pic_text"><%= sPrice %> RSD</span><br/>
                                 <% } %>
@@ -451,9 +422,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) { 
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
                                 %>
                                     <div class="pic_text_below"><%= sPrice %> RSD</div>
                                 <% } %>
@@ -468,7 +436,7 @@
                                 // assign title, author name, price, isbn and description to the variables
                                 bookInformation(rs);
                             } catch (SQLException e) {
-                                System.out.println("An exception occured: " + e.getMessage());
+                                System.out.println("Izuzetak: " + e.getMessage());
                             }
                         %>
                         
@@ -478,7 +446,7 @@
                                 <!-- @@@@@@@@@@@ DO IT -- change the TITLE and ALT (in the img tag) to the title of the book -->
                                 
                                 <!-- pull-left mr-2 is used for spacing between the image and the text -->
-                                <a href="ShowBook"><img src="images/book_7.jpg" class="img-fluid  float-left pull-left mr-2" alt="picture of a book" onclick="createCookieIndex(7)" title="picture of a book"></a>
+                                <a href="ShowBook"><img src="images/book_7.jpg" class="img-fluid  float-left pull-left mr-2" alt="slika sa knjigama" onclick="createCookieIndex(7)" title="slika sa knjigama"></a>
                                 <% if (!sAuthor.equalsIgnoreCase("")) { %>
                                     <span class="pic_text"><%= sAuthor%></span><br/>
                                 <% }
@@ -487,9 +455,6 @@
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
                                 %>
                                     <span class="pic_text"><%= sPrice %> RSD</span><br/>
                                 <% } %>
@@ -509,9 +474,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% }
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
                                 %>
                                     <div class="pic_text_below"><%= sPrice %> RSD</div>
                                 <% } %> 
@@ -526,7 +488,7 @@
                                 // assign title, author name, price, isbn and description to the variables
                                 bookInformation(rs);
                             } catch (SQLException e) {
-                                System.out.println("An exception occured: " + e.getMessage());
+                                System.out.println("Izuzetak: " + e.getMessage());
                             }
                         %>
                         
@@ -536,7 +498,7 @@
                                 <!-- @@@@@@@@@@@ DO IT -- change the TITLE and ALT to the title of the book -->
                                 
                                 <!-- pull-left mr-2 is used for spacing between the image and the text -->
-                                <a href="ShowBook"><img src="images/book_8.jpg" class="img-fluid  float-left pull-left mr-2" alt="picture of a book" onclick="createCookieIndex(8)" title="picture of a book"></a>
+                                <a href="ShowBook"><img src="images/book_8.jpg" class="img-fluid  float-left pull-left mr-2" alt="slika sa knjigama" onclick="createCookieIndex(8)" title="slika sa knjigama"></a>
                                 <% if (!sAuthor.equalsIgnoreCase("")) { %>
                                     <span class="pic_text"><%= sAuthor%></span><br/>
                                 <% } 
@@ -544,10 +506,7 @@
                                 %>
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
-                                   if (!sPrice.equalsIgnoreCase("")) {
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
+                                   if (!sPrice.equalsIgnoreCase("")) { 
                                 %>
                                     <span class="pic_text"><%= sPrice %> RSD</span><br/>
                                 <% } %>
@@ -566,10 +525,7 @@
                                 %>
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% } 
-                                   if (!sPrice.equalsIgnoreCase("")) {
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
+                                   if (!sPrice.equalsIgnoreCase("")) { 
                                 %>
                                     <div class="pic_text_below"><%= sPrice %> RSD</div>
                                 <% } %>    
@@ -584,7 +540,7 @@
                                 // assign title, author name, price, isbn and description to the variables
                                 bookInformation(rs);
                             } catch (SQLException e) {
-                                System.out.println("An exception occured: " + e.getMessage());
+                                System.out.println("Izuzetak: " + e.getMessage());
                             }
                         %>
                         
@@ -594,7 +550,7 @@
                                 <!-- @@@@@@@@@@@ DO IT -- change the TITLE and ALT to the title of the book -->
                                 
                                 <!-- pull-left mr-2 is used for spacing between the image and the text -->
-                                <a href="ShowBook"><img src="images/book_9.jpg" class="img-fluid  float-left pull-left mr-2" alt="picture of a book" onclick="createCookieIndex(9)" title="picture of a book"></a>
+                                <a href="ShowBook"><img src="images/book_9.jpg" class="img-fluid  float-left pull-left mr-2" alt="slika sa knjigama" onclick="createCookieIndex(9)" title="slika sa knjigama"></a>
                                 <% if (!sAuthor.equalsIgnoreCase("")) { %>
                                     <span class="pic_text"><%= sAuthor%></span><br/>
                                 <% } 
@@ -603,9 +559,6 @@
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
                                 %>
                                     <span class="pic_text"><%= sPrice %> RSD</span><br/>
                                 <% } %>
@@ -625,9 +578,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% }
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
                                 %>
                                     <div class="pic_text_below"><%= sPrice %> RSD</div>
                                 <% } %>
@@ -642,7 +592,7 @@
                                 // assign title, author name, price, isbn and description to the variables
                                 bookInformation(rs);
                             } catch (SQLException e) {
-                                System.out.println("An exception occured: " + e.getMessage());
+                                System.out.println("Izuzetak: " + e.getMessage());
                             }
                         %>
                         &nbsp;
@@ -651,7 +601,7 @@
                                 <!-- @@@@@@@@@@@ DO IT -- change the TITLE and ALT ( in the img tag ) to the title of the book -->
                                 
                                 <!-- pull-left mr-2 is used for spacing between the image and the text -->
-                                <a href="ShowBook"><img src="images/book_10.jpg" class="img-fluid  float-left pull-left mr-2" alt="picture of a book" onclick="createCookieIndex(10)" title="picture of a book"></a>
+                                <a href="ShowBook"><img src="images/book_10.jpg" class="img-fluid  float-left pull-left mr-2" alt="slika sa knjigama" onclick="createCookieIndex(10)" title="slika sa knjigama"></a>
                                 <% if (!sAuthor.equalsIgnoreCase("")) { %>
                                     <span class="pic_text"><%= sAuthor%></span><br/>
                                 <% } 
@@ -660,9 +610,6 @@
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% }
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
                                 %>
                                     <span class="pic_text"><%= sPrice %> RSD</span><br/>
                                 <% } %>
@@ -682,9 +629,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% }
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99
-                                    sPrice = sPrice.replace('.',','); // replace the desimal . with ,
-                                    sPrice = PticaMetodi.dodajZarez(sPrice); // dodajem tačku u cenu iza hiljadu dinara 
                                 %>
                                     <div class="pic_text_below"><%= sPrice %> RSD</div>
                                 <% } %>
@@ -723,10 +667,10 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    ********************/ptica/zaposleni is the web site for employees and administrators
+                                    ********************/ptica/zaposleni je veb sajta za zaposlene i administratore.
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-info" data-dismiss="modal">Zatvori</button>
                                 </div>
                             </div>
                         </div>

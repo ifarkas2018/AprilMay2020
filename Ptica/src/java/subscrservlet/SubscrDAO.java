@@ -1,5 +1,5 @@
 /*
- * author: Ingrid Farkas
+ * author: Ingrid Farkaš
  * project: Ptica
  * SubscrDAO.java : handles running the SQL query (SubscrServl.java, method doPost)
  */

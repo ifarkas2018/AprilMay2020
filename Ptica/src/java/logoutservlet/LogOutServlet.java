@@ -1,5 +1,5 @@
 /*
- * author: Ingrid Farkas
+ * author: Ingrid Farkaš
  * project: Ptica
  * LogOutServlet.java : when the user clicks on the Log Out link (on the navbar) this servlet is called
  */
@@ -57,9 +57,9 @@ public class LogOutServlet extends HttpServlet {
         hSession.setAttribute("logged_in", "false" ); // set the session variable logged_in (whether the user is logged in) 
         hSession.setAttribute("emp_adm", "false"); // the user is not anymore using the website for employees and administrators
         hSession.setAttribute("user_type", "customer"); // the user type is now customer
-        String sTitle = "Log Out"; // used for passing the title to the JSP script
+        String sTitle = "Odjava"; // used for passing the title to the JSP script
         String sMessage = "SUCC_LOGOUT"; // used for passing the message to the JSP script	 
-        hSession.setAttribute("source_name", "Log Out"); // on which page I am now
+        hSession.setAttribute("source_name", "Odjava"); // on which page I am now
         hSession.setAttribute("message", sMessage); // setting the attribute message to the value of the sMessage
         hSession.setAttribute("title", sTitle); // setting the attribute title to the value of the sTitle
         response.sendRedirect("error_succ.jsp"); // show the error page   

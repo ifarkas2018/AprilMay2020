@@ -199,7 +199,7 @@
                 } else {
                     // in the database the price is in form 99999.99; in the form the price should be shown in form 99.999,99 
                     price = price.replace('.',','); // replace the desimal . with ,
-                    price = PticaMetodi.dodajZarez(price); // dodajem tačku u cenu iza hiljadu dinara 
+                    price = PticaMetodi.dodajTacku(price); // dodajem tačku u cenu iza hiljadu dinara 
                 }
                 
                 pages = rset.getString("pages"); // retrieve pages from rset
@@ -255,26 +255,26 @@
                                 <br />
                                
                                 <!-- Update -->
-                                <% if (source.equals("Ažuriraj knjigu")) {
+                                <% if (source.equals("Ažuriranje knjige")) {
                                 %>
-                                    <h3 class="text-info">Ažuriraj knjigu</h3>
+                                    <h3 class="text-info">Ažuriranje knjige</h3>
                                 <%
-                                   } else if (source.equals("Izbriši knjigu")) {
+                                   } else if (source.equals("Brisanje knjige")) {
                                 %>
                                     <!-- Delete -->
-                                    <h3 class="text-info">Izbriši knjigu</h3>
+                                    <h3 class="text-info">Brisanje knjige</h3>
                                 <%
                                    }
                                 %>
                                 
                                 <br />
                              
-                                <% if (source.equals("Ažuriraj knjigu")) {
+                                <% if (source.equals("Ažuriranje knjige")) {
                                 %>
                                     <!-- after clicking on the button updateDB.jsp is shown -->
                                     <form id="upd_del_book" name="upd_del_book" action="updateDB.jsp" onsubmit="return checkForm();" method="post">
                                 <%
-                                    } else if (source.equals("Izbriši knjigu")) {
+                                    } else if (source.equals("Brisanje knjige")) {
                                 %>
                                      <!-- after clicking on the button DelServlet is shown -->
                                      <form id="upd_del_book" name="upd_del_book" action="DelServlet" onsubmit="return checkForm();" method="post">
@@ -284,7 +284,7 @@
                                     <!-- creating the input element for the title -->
                                     <div class="form-group">
                                         <label for="title">Naslov</label> 
-                                        <% if (source.equals("Ažuriraj knjigu")) {
+                                        <% if (source.equals("Ažuriranje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input3.equalsIgnoreCase("")) { %>
@@ -295,7 +295,7 @@
                                             <% } 
                                             %>
                                         <%
-                                           } else if (source.equals("Izbriši knjigu")) {
+                                           } else if (source.equals("Brisanje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input3.equalsIgnoreCase("")) { %>
@@ -313,7 +313,7 @@
                                     <!-- creating the input element for the author -->
                                     <div class="form-group">
                                         <label for="author">Autor</label>
-                                        <% if (source.equals("Ažuriraj knjigu")) {
+                                        <% if (source.equals("Ažuriranje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input4.equalsIgnoreCase("")) { %>
@@ -324,7 +324,7 @@
                                             <% }
                                             %>
                                         <%
-                                           } else if (source.equals("Izbriši knjigu")) {
+                                           } else if (source.equals("Brisanje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input4.equalsIgnoreCase("")) { %>
@@ -343,7 +343,7 @@
                                     <!-- creating the input element for the ISBN -->
                                     <div class="form-group">
                                         <label for="isbn">Isbn</label> 
-                                        <% if (source.equals("Ažuriraj knjigu")) {
+                                        <% if (source.equals("Ažuriranje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input5.equalsIgnoreCase("")) { %>
@@ -354,7 +354,7 @@
                                                 <input type="text" class="form-control form-control-sm" maxlength="13" name="isbn" id="isbn" maxlength="13" onchange="setCookie()" onfocusout='isNumber("upd_del_book", "isbn", "is_isbn", "isbn_message", false, false)' value="<%= isbn %>"> 
                                             <% } %>
                                         <%
-                                           } else if (source.equals("Izbriši knjigu")) {
+                                           } else if (source.equals("Brisanje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input5.equalsIgnoreCase("")) { %>
@@ -373,7 +373,7 @@
                                     <!-- creating the input element for price -->
                                     <div class="form-group">
                                         <label for="price">Cena</label> 
-                                        <% if (source.equals("Ažuriraj knjigu")) {
+                                        <% if (source.equals("Ažuriranje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input6.equalsIgnoreCase("")) {
@@ -386,7 +386,7 @@
                                                 <input type="text" class="form-control form-control-sm" name="price" id="price" maxlength="9" onchange="setCookie()" onfocusout='daLiJeCena("upd_del_book", "price", "is_price", "price_message")' value="<%= price %>"> 
                                             <% } %>
                                         <%
-                                           } else if (source.equals("Izbriši knjigu")) {
+                                           } else if (source.equals("Brisanje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input6.equalsIgnoreCase("")) { 
@@ -407,7 +407,7 @@
                                     <!-- creating the input element for number of pages -->
                                     <div class="form-group">
                                         <label for="pages">Broj strana</label>
-                                        <% if (source.equals("Ažuriraj knjigu")) {
+                                        <% if (source.equals("Ažuriranje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input7.equalsIgnoreCase("")) { %>
@@ -417,7 +417,7 @@
                                                 <input type="text" class="form-control form-control-sm" name="pages" id="pages" maxlength="4" onchange="setCookie()" onfocusout='isNumber("upd_del_book", "pages", "is_pages", "pages_message", false, false)' value="<%= pages %>"> 
                                             <% } %>
                                         <%
-                                           } else if (source.equals("Izbriši knjigu")) {
+                                           } else if (source.equals("Brisanje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input7.equalsIgnoreCase("")) { %>
@@ -435,7 +435,7 @@
                                     <!-- creating the drop down list for the Category -->
                                     <div class="form-group"> 
                                         <label for="category">Žanrovi</label> <!-- category label -->
-                                        <% if (source.equals("Ažuriraj knjigu")) {
+                                        <% if (source.equals("Ažuriranje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input8.equalsIgnoreCase("")) { %>
@@ -519,7 +519,7 @@
                                                 </select>
                                             <% } %>
                                         <%
-                                           } else if (source.equals("Izbriši knjigu")) {
+                                           } else if (source.equals("Brisanje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input8.equalsIgnoreCase("")) { %>
@@ -611,7 +611,7 @@
                                     <!-- creating the textarea for the book description -->
                                     <div class="form-group">
                                         <label for="descr">Opis</label>
-                                        <% if (source.equals("Ažuriraj knjigu")) {
+                                        <% if (source.equals("Ažuriranje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input9.equalsIgnoreCase("")) { %>
@@ -621,7 +621,7 @@
                                                 <textarea class="form-control" name="descr" id="descr" rows="4" onchange="setCookie()"><%= descr %></textarea>
                                             <% } %>
                                         <%
-                                           } else if (source.equals("Izbriši knjigu")) {
+                                           } else if (source.equals("Brisanje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input9.equalsIgnoreCase("")) { %>
@@ -638,7 +638,7 @@
                                     <!-- creating the input element for the publisher -->
                                     <div class="form-group">
                                         <label for="publisher">Izdavač</label> 
-                                        <% if (source.equals("Ažuriraj knjigu")) {
+                                        <% if (source.equals("Ažuriranje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input10.equalsIgnoreCase("")) { %>
@@ -648,7 +648,7 @@
                                                 <input type="text" class="form-control form-control-sm" name="publisher" id="publisher" maxlength="40" onchange="setCookie()" value="<%= publ_name %>"> 
                                             <% } %>
                                         <%
-                                           } else if (source.equals("Izbriši knjigu")) {
+                                           } else if (source.equals("Brisanje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input10.equalsIgnoreCase("")) { %>
@@ -666,7 +666,7 @@
                                     <!-- creating the input element for year the book was published -->
                                     <div class="form-group">
                                         <label for="yrpublished">Godina izdanja</label>
-                                        <% if (source.equals("Ažuriraj knjigu")) {
+                                        <% if (source.equals("Ažuriranje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input11.equalsIgnoreCase("")) { %>
@@ -676,7 +676,7 @@
                                                 <input type="text" class="form-control form-control-sm" name="yrpublished" id="yrpublished" maxlength="4" onchange="setCookie()" onfocusout='isNumber("upd_del_book", "yrpublished", "is_yrpubl", "yrpubl_message", false, false)' value="<%= publ_year %>"> 
                                             <% } %>
                                         <%
-                                           } else if (source.equals("Izbriši knjigu")) {
+                                           } else if (source.equals("Brisanje knjige")) {
                                         %>
                                             <!-- if the user just did the subscribe show the value from the form before the subscribe -->
                                             <% if (!input11.equalsIgnoreCase("")) { %>
@@ -699,15 +699,15 @@
                                         </div>    
                                     </div>
                                     
-                                    <% if (source.equals("Ažuriraj knjigu")) {
+                                    <% if (source.equals("Ažuriranje knjige")) {
                                     %>
                                         <!-- adding the Update button to the form; btn-sm is used for smaller (narrower) size of the control -->
-                                        <button type="submit" id="btnSubmit" class="btn btn-info btn-sm">Ažuriraj</button>
+                                        <button type="submit" id="btnSubmit" class="btn btn-info btn-sm">Ažuriranje knjige</button>
                                     <%
-                                        } else if (source.equals("Izbriši knjigu")) {
+                                        } else if (source.equals("Brisanje knjige")) {
                                     %>
                                         <!-- adding the Delete button to the form; btn-sm is used for smaller (narrower) size of the control -->
-                                        <button type="submit" id="btnSubmit" class="btn btn-info btn-sm">Izbriši</button>
+                                        <button type="submit" id="btnSubmit" class="btn btn-info btn-sm">Brisanje knjige</button>
                                     <%
                                         }
                                     %>

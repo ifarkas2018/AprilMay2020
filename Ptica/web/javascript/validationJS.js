@@ -47,11 +47,11 @@ function isNumber(formid, input_field, num_type, msg_field, characters, dec_poin
         // if the value entered in a isbn is not a nuumber (if characters is true, number can contain a %, _)
         if (!regex.test(number)) {
             if (characters && dec_point) { // %, _, . can be entered in the input field (beside digits)
-                document.getElementById(msg_field).innerHTML = "* Can contain only digits (wildcards and decimal point)"; // show the message
+                document.getElementById(msg_field).innerHTML = "Ovo polje može da sadrži cifre (džoker znakove i decimalnu tačku)"; // show the message
             } else if (dec_point) { 
-                document.getElementById(msg_field).innerHTML = "* Can contain only digits (and decimal point)"; 
+                document.getElementById(msg_field).innerHTML = "Ovo polje može da sadrži cifre (i decimalnu tačku)"; 
             } else if (characters) {
-                document.getElementById(msg_field).innerHTML = "* Can contain only digits (and wildcards)"; 
+                document.getElementById(msg_field).innerHTML = "Ovo polje može da sadrži cifre (i džoker znakove)"; 
             } else {
                 document.getElementById(msg_field).innerHTML = "Ovo polje može da sadrži cifre."; // show the message
             }
@@ -129,9 +129,9 @@ function valLetters(input_field, message_span, name_type, characters, required) 
     if (!input_field.value == '') {
         if (!regex.test(input_field.value)) { // if the user entered some characters which are not letters (in the input_field)
             if (characters)
-                message_span.innerHTML = "* Can contain letters, commas, apostrophies, hyphen, space, wildcards";
+                message_span.innerHTML = "Ovo polje može da sadrži slova, prazno mesto, džoker znakove i znakove ,'- ";
             else
-                message_span.innerHTML = "* Can contain letters, commas, apostrophies, hyphen, space";
+                message_span.innerHTML = "Ovo polje može da sadrži slova, prazno mesto, i znakove ,'- ";
             setNameVal(name_type, 'false');
         } else { // the user entered characters which are letters (in the input_field)
             setNameVal(name_type, 'true');
@@ -145,7 +145,7 @@ function valLetters(input_field, message_span, name_type, characters, required) 
         if (required == 'true') {
             setNameVal(name_type, 'false');
             // NAME_VAL = 'false';
-            message_span.innerHTML = "Ovo polje je obavezno.";
+            message_span.innerHTML = " ";
         } else {
             setNameVal(name_type, 'true');
             NAME_VAL = 'true';

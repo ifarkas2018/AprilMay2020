@@ -282,7 +282,7 @@
                                     </div>
 
                                     <!-- adding the Search button to the form; btn-sm is used for smaller (narrower) size of the control -->
-                                    <button type="submit" class="btn btn-info btn-sm">Traži</button>
+                                    <button type="submit" class="btn btn-info btn-sm">Pretraga knjiga</button>
 
                                     <!-- adding a new container -->
                                     <div class="container">

@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Ptica - Ažuriraj knjigu</title>
+        <title>Ptica - Ažuriranje knjige</title>
         <!-- link to the external style sheet -->
         <link href="css/templatecss.css" rel="stylesheet" type="text/css">
     </head>
@@ -19,7 +19,7 @@
     <body>
         <% 
             HttpSession hSession = PticaMetodi.returnSession(request);
-            hSession.setAttribute("source_name", "Ažuriraj knjigu"); // on which page I am now
+            hSession.setAttribute("source_name", "Ažuriranje knjige"); // on which page I am now
         %>
         
         <!-- header.jsp contains - company logo, company name and the navigation bar -->

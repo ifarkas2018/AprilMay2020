@@ -1,5 +1,5 @@
 /*
- * author: Ingrid Farkas
+ * author: Ingrid Farkaš
  * project: Ptica
  * AddSessVar.java : this servlet is called to read the values in cookies (JavaScript) and to add them as session var.
  */

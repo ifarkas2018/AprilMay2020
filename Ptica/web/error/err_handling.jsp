@@ -1,8 +1,8 @@
 <%-- 
     Document   : err_handling
     Created on : 20-Feb-2020, 11:59:05
-    Author     : Ingrid Farkas
-    Project    : Ptica Metodi
+    Author     : Ingrid Farkaš
+    Project    : Ptica
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -43,7 +43,7 @@
                                    
         </style>
         
-        <title>Lesen</title>
+        <title>Ptica</title>
     </head>
     
     <body>
@@ -75,7 +75,7 @@
                     <br /><br />
                     <div> 
                         <!-- horizontally centering the picture using center-image, img-fluid is for responsive image -->
-                        <img src="images/books.png" class="img-fluid center-image" alt="Foto mit Büchern" title="Foto mit Büchern"> 
+                        <img src="images/books.png" class="img-fluid center-image" alt="slika sa knjigama" title="slika sa knjigama"> 
                     </div>
                 </div>
                 
@@ -90,10 +90,10 @@
                                 <br />
                                 <h3 class="text-info">Ptica</h3> <!-- title on the web page -->
                                 <br />
-                                The web site is under maintenance.
+                                Sada menjamo veb sajtu.
                                 <br />
                                 <br />
-                                Please <span class="text-warning">visit </span>the web site later!
+                                Molimo Vas <span class="text-warning">posetite nas kasnije!</span>
                                 <br />
                                 <br />
                                 <br />

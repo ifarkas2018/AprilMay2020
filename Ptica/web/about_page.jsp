@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Ptica - About Us</title>
+        <title>Ptica - O nama</title>
         <!-- link to the external style sheet -->
         <link href="css/templatecss.css" rel="stylesheet" type="text/css">
     </head>

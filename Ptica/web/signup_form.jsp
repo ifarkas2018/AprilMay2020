@@ -24,18 +24,18 @@
             // matchPass: compares the two entered passwords and sets the variable EQUAL_PASSW (whether the entered passwords are equal)
             function matchPass(){  
                 var passwd1 = document.signup.passw1.value;  
-                var passwd2 = document.signup.passw2.value;  
+                var passwd2 = document.signup.passw2.value;   
 
                 if (passwd1 == passwd2) {  
                     EQUAL_PASSW= 'true';
                     // remove the message below the password input field
-                    passw1_message.innerHTML = "* Required Field";
-                    passw2_message.innerHTML = "* Required Field";
+                    passw1_message.innerHTML = " ";
+                    passw2_message.innerHTML = " ";
                 }  else {  
                     EQUAL_PASSW = 'false'; 
                     // show the message below the password input field
-                    passw1_message.innerHTML = "* Passwords must match";
-                    passw2_message.innerHTML = "* Passwords must match";
+                    passw1_message.innerHTML = "Lozinke se ne poklapaju.";
+                    passw2_message.innerHTML = "Lozinke se ne poklapaju.";
                 }  
             }  
            
@@ -93,7 +93,7 @@
         </script>
     </head>
     
-    <title>Ptica - Napravi Nalog</title>
+    <title>Ptica - Novi nalog</title>
     <body onload="setDefaults()">
         <%
             final String PAGE_NAME = "signup_page.jsp"; // page which is loaded now 
@@ -123,7 +123,7 @@
                             <div class="col">
                                 &nbsp; &nbsp;
                                 <br/>
-                                <h3 class="text-info">Napravi Nalog</h3> <!-- title on the web page -->
+                                <h3 class="text-info">Novi nalog</h3> <!-- title on the web page -->
                                 <br/> 
                                 <%  
                                     HttpSession hSession2 = PticaMetodi.returnSession(request);
@@ -187,29 +187,28 @@
                                         
                                     <!-- creating the input element for the username -->
                                     <div class="form-group">
-                                        <label for="username">Korisničko ime</label> <!-- username label -->
+                                        <label for="username">Korisničko ime <span class="text_size text-danger">*</span></label> <!-- username label -->
                                         <!-- filling in the username: required -->
                                         <input type="text" class="form-control form-control-sm" name="username" id="username" maxlength="20" onchange="setCookie()" onfocusout='setFocus("signup", "username")'  required value="<%= input0 %>"> 
-                                        <label class="text_size text-danger">* Required Field</label>
                                     </div>
                                         
                                     <!-- creating the input element for the password -->
                                     <div class="form-group">
-                                        <label for="passw1">Lozinka</label> <!-- password name label -->
+                                        <label for="passw1">Lozinka <span class="text_size text-danger">*</span></label> <!-- password name label -->
                                         <!-- filling in the password: required -->
                                         <input type="password" class="form-control form-control-sm" name="passw1" id="passw1" maxlength="17" 
-                                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter and at least 8 or more characters" 
+                                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Lozinka mora da sadrži najmanje 8 karaktera. Najmanje jedan broj, jedno veliko i jedno malo slovo." 
                                                onfocusout='matchPass()' required> 
-                                        <span id="passw1_message" class="text_size text-danger">* Required Field</span>
+                                        <span id="passw1_message" class="text_size text-danger"></span>
                                     </div>
                                     
                                     <!-- creating the input element for re-entering the password -->
                                     <div class="form-group">
-                                        <label for="passw2">Ponovite lozinku</label> <!-- password name label -->
+                                        <label for="passw2">Ponovite lozinku <span class="text_size text-danger">*</span></label> <!-- password name label -->
                                         <input type="password" class="form-control form-control-sm" name="passw2" id="passw2" maxlength="17" 
-                                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter and at least 8 or more characters" 
-                                               onfocusout='matchPass()' required> 
-                                        <span id="passw2_message" class="text_size text-danger">* Required Field</span>
+                                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Lozinka mora da sadrži najmanje 8 karaktera. Najmanje jedan broj, jedno veliko i jedno malo slovo." 
+                                               onfocusout='matchPass()' required>
+                                        <span id="passw2_message" class="text_size text-danger"></span>
                                     </div>
                                     
                                     <!-- creating the input element for the administrator -->
@@ -247,7 +246,7 @@
                                     </div>
                                         
                                     <!-- adding the Submit button to the form; btn-sm is used for smaller (narrower) size of the control -->
-                                    <button type="submit" id="btnSubmit" class="btn btn-info btn-sm">Pošalji</button>
+                                    <button type="submit" id="btnSubmit" class="btn btn-info btn-sm">Pošaljite</button>
                                     
                                     <!-- adding a new container -->
                                     <div class="container">

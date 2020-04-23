@@ -1,5 +1,5 @@
 /*
- * author: Ingrid Farkas
+ * author: Ingrid Farkaš
  * project: Ptica
  * SubscribeServl.java: after clicking on the Subscribe button (footer.jsp) this servlet is called
  */
@@ -139,7 +139,7 @@ public class SubscrServl extends HttpServlet {
             // show the page subscrres_page.jsp
             response.sendRedirect("subscrres_page.jsp"); // redirects the response to subscrres_page.jsp
         } catch (Exception e){ // Throwable
-            System.out.print("The following error occured: ");
+            System.out.print("Izuzetak: ");
             System.out.println(e.getMessage());
         }
     }

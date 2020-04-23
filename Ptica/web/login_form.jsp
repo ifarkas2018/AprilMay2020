@@ -102,14 +102,14 @@
                                             // store on which page I am now in case the user clicks on subscribe button in the footer
                                             hSession.setAttribute("page_name", PAGE_NAME);
                                         %>
-                                        <label for="username">Korisničko ime <span class="text_color">*</span></label> <!-- username label -->
+                                        <label for="username">Korisničko ime <span class="text_size text-danger">*</span></label> <!-- username label -->
                                         <!-- filling in the username: required -->
                                         <input type="text" class="form-control form-control-sm" name="username" id="username" maxlength="20" onchange="setCookie()" onfocusout='setFocus("login", "username")' required value = "<%= input0 %>" > 
                                     </div>
                                         
                                     <!-- creating the input element for the password -->
                                     <div class="form-group">
-                                        <label for="passw">Lozinka <span class="text_color">*</span></label></label> <!-- password name label -->
+                                        <label for="passw">Lozinka <span class="text_size text-danger">*</span></label> <!-- password name label -->
                                         <!-- filling in the passw: required -->
                                         <input type="password" class="form-control form-control-sm" name="passw" id="passw" maxlength="17" required> 
                                     </div>

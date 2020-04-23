@@ -28,7 +28,6 @@
                 
                 for (i = 0; i < NUM_FIELDS; i++) {
                     if (i === 3) { // creating the cookie that containes the price
-                        // alert("strWithDot" + strWithDot);
                         strWithDot = document.getElementById(inp_names[i]).value; 
                         strWithDot = strWithDot.replace('.','!');
                         strWithDot = strWithDot.replace(',','.');
@@ -70,12 +69,12 @@
                     <br /><br />
                     <div> 
                         <!-- horizontally centering the picture using center-image, img-fluid is for responsive image -->
-                        <img src="images/books.png" class="img-fluid center-image" alt="slika knjiga" title="slika knjiga"> 
+                        <img src="images/books.png" class="img-fluid center-image" alt="slika sa knjigama" title="slika sa knjigama"> 
                     </div>
                     <br /><br />
                     <div> 
                         <!-- horizontally centering the picture using center-image, img-fluid is for responsive image -->
-                        <img src="images/books.png" class="img-fluid center-image" alt="slika knjiga" title="slika knjiga"> 
+                        <img src="images/books.png" class="img-fluid center-image" alt="slika sa knjigama" title="slika sa knjigama"> 
                     </div>
                 </div>
                 

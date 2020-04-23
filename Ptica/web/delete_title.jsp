@@ -13,14 +13,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Ptica - Delete Book</title>
+        <title>Ptica - Brisanje knjige</title>
         <!-- link to the external style sheet -->
         <link href="css/templatecss.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <% 
             HttpSession hSession = PticaMetodi.returnSession(request); // the session to which I am going to add attributes
-            hSession.setAttribute("source_name", "Izbriši knjigu"); // on which page I am now
+            hSession.setAttribute("source_name", "Brisanje knjige"); // on which page I am now
         %>
         <!-- including the file header.jsp -->
         <!-- header.jsp contains - company logo, company name and the navigation bar -->

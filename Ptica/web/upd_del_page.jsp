@@ -118,12 +118,12 @@
                     bookid = "";
                     // Show the page with the message that the book can't be found in the database
                     
-                    if (source1.equalsIgnoreCase("Izbriši knjigu")) {
-                        hSession.setAttribute("source_name", "Izbriši knjigu"); // the web page name
-                        sTitle = "Izbriši knjigu"; // used for passing the title from one JSP script to the other
-                    } if (source1.equalsIgnoreCase("Ažuriraj knjigu")) {
-                        hSession.setAttribute("source_name", "Ažuriraj knjigu"); // the web page name
-                        sTitle = "Ažuriraj knjigu"; // used for passing the title from one JSP script to the other
+                    if (source1.equalsIgnoreCase("Brisanje knjige")) {
+                        hSession.setAttribute("source_name", "Brisanje knjige"); // the web page name
+                        sTitle = "Brisanje knjige"; // used for passing the title from one JSP script to the other
+                    } if (source1.equalsIgnoreCase("Ažuriranje knjige")) {
+                        hSession.setAttribute("source_name", "Ažuriranje knjige"); // the web page name
+                        sTitle = "Ažuriranje knjige"; // used for passing the title from one JSP script to the other
                     }
                     String sMessage = "ERR_NO_BOOKID"; // used for passing the message from one JSP script to the other
                     hSession.setAttribute("message", sMessage);
@@ -131,9 +131,9 @@
                     response.sendRedirect("error_succ.jsp"); // redirects the response to error_succ.jsp    
                 }
             } catch (Exception e){
-                String sTitle = "Ažuriraj knjigu"; // used for passing the title from one JSP script to the other
+                String sTitle = "Ažuriranje knjige"; // used for passing the title from one JSP script to the other
                 String sMessage = "ERR_DB"; // used for passing the message from one JSP script to the other
-                hSession.setAttribute("source_name", "Ažuriraj knjigu"); // on which page I am now
+                hSession.setAttribute("source_name", "Ažuriranje knjige"); // on which page I am now
                 hSession.setAttribute("message", sMessage); // setting the attribute message to the value sMessage
                 hSession.setAttribute("title", sTitle); // setting the attribute message to the value sTitle
                 response.sendRedirect("error_succ.jsp"); // redirects the response to error_succ.jsp 

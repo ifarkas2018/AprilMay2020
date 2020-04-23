@@ -1,5 +1,5 @@
 /*
- * author: Ingrid Farkas
+ * author: Ingrid Farkaš
  * project: Ptica
  * LoginServlet.java : when the user clicks on the Submit button (login_form.jsp) this servlet is called
  */
@@ -93,9 +93,9 @@ public class LoginServlet extends HttpServlet {
                 response.sendRedirect("index.jsp"); // show the home page for that user - the user logged in    
             } else {
                 // setting the hSession ( to pass them to the page error_succ.jsp ) and loading the page error_succ.jsp
-                String sTitle = "Login"; // used for passing the title from one JSP script to the other
+                String sTitle = "Prijava"; // used for passing the title from one JSP script to the other
                 String sMessage = "ERR_LOGIN"; // used for passing the message from one JSP script to the other	 
-                hSession.setAttribute("source_name", "Login"); // on which page I am now
+                hSession.setAttribute("source_name", "Prijava"); // on which page I am now
                 hSession.setAttribute("message", sMessage); // setting the attribute message to the value of the sMessage
                 hSession.setAttribute("title", sTitle); // setting the attribute title to the value of the sTitle
                 hSession.setAttribute("logged_in", "false"); // set the session variable logged_in ( whether the user is logged in )

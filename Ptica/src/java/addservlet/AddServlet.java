@@ -1,5 +1,5 @@
 /*
- * author: Ingrid Farkas
+ * author: Ingrid Farkaš
  * project: Ptica
  * AddServlet.java : when the user clicks on the Submit button (add_form.jsp) this servlet is called
  */

@@ -1,5 +1,5 @@
 /*
- * author: Ingrid Farkas
+ * author: Ingrid Farkaš
  * project: Ptica
  * Zaposleni.java : for the URL: http://localhost:80880/ptica/zaposleni loads the web page index.jsp with the link for Login (employees or administrators)
  */

@@ -1,5 +1,5 @@
 /*
- * author: Ingrid Farkas
+ * author: Ingrid Farkaš
  * project: Ptica
  * AddDAO.java : handles running the SQL query (used in AddServlet.java)
  */
@@ -214,7 +214,7 @@ public class AddDAO {
                 try {
                     con.close(); // closing the Connection object
                 } catch (Exception e) {
-                    System.out.print("The following error occured: ");
+                    System.out.print("Izuzetak: ");
                     System.out.println(e.getMessage());
                 }
                 con = null;
@@ -224,7 +224,7 @@ public class AddDAO {
                 try {
                     rs.close(); // closing the RecordSet object
                 } catch (Exception e) {
-                    System.out.print("The following error occured: ");
+                    System.out.print("Izuzetak: ");
                     System.out.println(e.getMessage());
                 }
                 rs = null;
@@ -234,7 +234,7 @@ public class AddDAO {
                 try {
                     stmt.close(); // closing the Statement object
                 } catch (Exception e) {
-                    System.out.print("The following error occured: ");
+                    System.out.print("Izuuzetak: ");
                     System.out.println(e.getMessage());
                 }
                 stmt = null;
@@ -244,7 +244,7 @@ public class AddDAO {
                 try {
                     preparedStmt.close(); // closing the Statement object
                 } catch (Exception e) {
-                    System.out.print("The following error occured: ");
+                    System.out.print("Izuuzetak: ");
                     System.out.println(e.getMessage());
                 }
                 preparedStmt = null;

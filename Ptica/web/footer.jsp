@@ -164,7 +164,7 @@
                         <!-- the Bootstrap column takes 12 columns on the large screens, 12 columns on the medium sized screens, 
                              12 columns on the extra small sized screens  -->
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="smaller-text"> Ptica d.o.o. Resavska 58, Novi Sad Matični broj: 28945197 </div>
+                            <div class="smaller-text"> Ptica d.o.o. Resavska 58, Beograd Matični broj: 28945197 </div>
                             <!-- adding the copyright information at the bottom of the footer -->
                             <div class="smaller-text"> Copyright &copy; Ptica 2018 </div>
                         </div>

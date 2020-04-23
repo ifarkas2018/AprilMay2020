@@ -1,7 +1,7 @@
 <%-- 
     Document   : contact_info
     Created on : 10-Apr-2019, 19:49:41
-    Author     : Ingrid Farkas
+    Author     : Ingrid Farkaš
     Project    : Ptica
 --%>
 
@@ -12,7 +12,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/templatecss.css">
-        <title>Ptica - Contact Us</title>
+        <title>Ptica - Kontakt</title>
       
         <!-- internal style sheet -->
         <style>
@@ -48,7 +48,7 @@
                     <br /><br />
                     <div> 
                         <!-- horizontally centering the picture using center-image, img-fluid is for responsive image -->
-                        <img src="images/books.png" class="img-fluid center-image" alt="picture of books" title="picture of books"> 
+                        <img src="images/books.png" class="img-fluid center-image" alt="slika sa knjigama" title="slika sa knjigama"> 
                     </div>
                 </div>
                 
@@ -59,17 +59,17 @@
                             <div class="col">
                                 &nbsp; &nbsp;
                                 <br />
-                                <h3  class="text-info">Contact Us</h3>
+                                <h3  class="text-info">Kontakt</h3>
                                 <br/>
                                 <!-- information about the store - London -->
                                 <span class="text-warning">
-                                    <font size="+2">London</font>
+                                    <font size="+2">Beograd</font>
                                 </span>
                                 <br />
-                                94 Grosvenor Ave., London SW1 5RD <br/>
+                                Resavska 58, Beograd <br/>
                                 Email: 
                                 <span class="email">
-                                    <a href="mailto:london@ptica.com?subject=Feedback&body=Message">london@ptica.com</a>
+                                    <a href="mailto:ptica.beograd@ptica.com?subject=Feedback&body=Message">ptica.beograd@ptica.com</a>
                                 </span>
                                 <br />
                                 <br />
@@ -77,34 +77,34 @@
                                 <table class="table table-bordered table-sm">
                                     <thead>
                                         <tr class="table-active">
-                                          <th scope="col" colspan="2">Opening Hours</th>
+                                          <th scope="col" colspan="2">Radno vreme</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr class="table-light">
-                                          <th scope="row">Monday - Friday</th>
-                                          <td>10.00 am - 9.30 pm</td>
+                                          <th scope="row">Ponedeljak - Petak</th>
+                                          <td>10:00 - 21:30</td>
                                         </tr>
                                         <tr class="table-light">
-                                          <th scope="row">Saturday</th>
-                                          <td>10.00 am - 9.00 pm</td>
+                                          <th scope="row">Subota</th>
+                                          <td>10:00 - 21:00</td>
                                         </tr>
                                         <tr class="table-light"> 
-                                          <th scope="row">Sunday</th>
-                                          <td>10.00 am - 6.00 pm</td>
+                                          <th scope="row">Nedelja</th>
+                                          <td>10:00 - 18:00</td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <br />
                                 <!-- information about the store - Norwich -->
                                 <span class="text-warning">
-                                    <font size="+2">Norwich</font><br />
+                                    <font size="+2">Novi Sad</font><br />
                                 </span>
-                                78 Main Street, London S2H 8LS <br />
+                                Zmaj Jovina 15, Novi Sad <br />
                                 
                                 Email: 
                                 <span class="email">
-                                    <a href="mailto:norwich@ptica.com?subject=Feedback&body=Message">norwich@ptica.com</a>
+                                    <a href="mailto:ptica.novisad@ptica.com?subject=Feedback&body=Message">ptica.novisad@ptica.com</a>
                                 </span>
                                     
                                 <br />
@@ -114,21 +114,21 @@
                                 <table class="table table-bordered table-sm">
                                     <thead >
                                         <tr class="table-active">
-                                            <th scope="col" colspan="2">Opening Hours</th>
+                                            <th scope="col" colspan="2">Radno vreme</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr class="table-light">
-                                            <th scope="row">Monday - Friday</th>
-                                            <td>7.00 am - 9.30 pm</td>
+                                            <th scope="row">Ponedeljak - Petak</th>
+                                            <td>7:00 - 21:30</td>
                                         </tr>
                                         <tr class="table-light">
-                                            <th scope="row">Saturday</th>
-                                            <td>9.00 am - 5.00 pm</td>
+                                            <th scope="row">Subota</th>
+                                            <td>9:00 - 17:00</td>
                                         </tr>
                                         <tr class="table-light">
-                                            <th scope="row">Sunday</th>
-                                            <td>9.00 am - 5.00 pm</td>
+                                            <th scope="row">Nedelja</th>
+                                            <td>9:00 - 17:00</td>
                                         </tr>
                                     </tbody>
                                  </table>
