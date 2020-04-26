@@ -98,7 +98,7 @@
                                             String sISBN = rs.getString("isbn");
                                             // show the value for the title, author and price
                                             String descr = rs.getString("descr");
-                                            out.print("<li><b>" + sTitle + "</b> by (author) " + sAuthor ); 
+                                            out.print("<li><b>" + sTitle + "</b> by (<b>author</b>) " + sAuthor ); 
                                             
                                             // if there is value for the price : show it
                                             if (sPrice != null && !sPrice.equalsIgnoreCase("")){

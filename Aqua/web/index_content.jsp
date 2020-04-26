@@ -91,6 +91,7 @@
                         sAuthor = rs.getString("au_name");
                         // read the price
                         sPrice = rs.getString("price");
+                        sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                     }
                 } catch ( SQLException ex ) {
                     System.out.println("An exception occured: " + ex.getMessage());
@@ -140,8 +141,7 @@
                                 %>
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
-                                   if (!sPrice.equalsIgnoreCase("")) {
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
+                                   if (!sPrice.equalsIgnoreCase("")) {    
                                 %>
                                     <span class="pic_text">&pound;<%= sPrice %></span><br/>
                                 <% } %>
@@ -157,7 +157,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) { 
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma in the price after 1000 pounds
                                 %>
                                     <div class="pic_text_below">&pound;<%= sPrice %></div>
                                 <% } %>
@@ -194,7 +193,6 @@
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <span class="pic_text">&pound;<%= sPrice %></span><br/>
                                 <% } %>
@@ -211,7 +209,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) { 
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <div class="pic_text_below">&pound;<%= sPrice %></div>
                                 <% } %>
@@ -248,7 +245,6 @@
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <span class="pic_text">&pound;<%= sPrice %></span><br/>
                                 <% } %>
@@ -264,7 +260,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) { 
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <div class="pic_text_below">&pound;<%= sPrice %></div>
                                 <% } %>
@@ -300,7 +295,6 @@
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <span class="pic_text">&pound;<%= sPrice %></span><br/>
                                 <% } %>
@@ -317,7 +311,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <div class="pic_text_below">&pound;<%= sPrice %></div>
                                 <% } %>
@@ -354,7 +347,6 @@
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <span class="pic_text">&pound;<%= sPrice %></span><br/>
                                 <% } %>
@@ -370,7 +362,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) { 
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <div class="pic_text_below">&pound;<%= sPrice %></div>
                                 <% } %>
@@ -409,7 +400,6 @@
                                     <span class="pic_text"><b><%= sTitle %></b></span><br/>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <span class="pic_text">&pound;<%= sPrice %></span><br/>
                                 <% } %>
@@ -429,7 +419,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) { 
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <div class="pic_text_below">&pound;<%= sPrice %></div>
                                 <% } %>
@@ -463,7 +452,6 @@
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <span class="pic_text">&pound;<%= sPrice %></span><br/>
                                 <% } %>
@@ -483,7 +471,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% }
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <div class="pic_text_below">&pound;<%= sPrice %></div>
                                 <% } %> 
@@ -517,7 +504,6 @@
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <span class="pic_text">&pound;<%= sPrice %></span><br/>
                                 <% } %>
@@ -537,7 +523,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <div class="pic_text_below">&pound;<%= sPrice %></div>
                                 <% } %>    
@@ -571,7 +556,6 @@
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <span class="pic_text">&pound;<%= sPrice %></span><br/>
                                 <% } %>
@@ -591,7 +575,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% }
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <div class="pic_text_below">&pound;<%= sPrice %></div>
                                 <% } %>
@@ -624,7 +607,6 @@
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% }
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <span class="pic_text">&pound;<%= sPrice %></span><br/>
                                 <% } %>
@@ -644,7 +626,6 @@
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% }
                                    if (!sPrice.equalsIgnoreCase("")) {
-                                    sPrice = AquaMethods.addComma(sPrice); // adding the comma after 1000 pounds
                                 %>
                                     <div class="pic_text_below">&pound;<%= sPrice %></div>
                                 <% } %>
