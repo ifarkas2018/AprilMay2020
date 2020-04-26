@@ -90,7 +90,9 @@
                         // read the name of the author
                         sAuthor = rs.getString("au_name");
                         // read the price
-                        sPrice = rs.getString("price");
+                        sPrice = rs.getString("price"); 
+                        sPrice = sPrice.replace(".", ",");
+                        sPrice = LesenMethoden.addPoint(sPrice); // adding the comma after 1000 euros 
                     }
                 } catch ( SQLException ex ) {
                     System.out.println("An exception occured: " + ex.getMessage());
@@ -140,7 +142,7 @@
                                 %>
                                     <span class="pic_text"><b><%= sTitle%></b></span><br/>
                                 <% } 
-                                   if (!sPrice.equalsIgnoreCase("")) {
+                                   if (!sPrice.equalsIgnoreCase("")) { 
                                 %>
                                     <span class="pic_text">&euro; <%= sPrice %></span><br/>
                                 <% } %>
@@ -521,7 +523,7 @@
                                 %>
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% } 
-                                   if (!sPrice.equalsIgnoreCase("")) {
+                                   if (!sPrice.equalsIgnoreCase("")) { 
                                 %>
                                     <div class="pic_text_below">&euro; <%= sPrice %></div>
                                 <% } %>    
@@ -573,7 +575,7 @@
                                 %>
                                     <div class="pic_text_below"><b><%= sTitle%></b></div>
                                 <% }
-                                   if (!sPrice.equalsIgnoreCase("")) {
+                                   if (!sPrice.equalsIgnoreCase("")) { 
                                 %>
                                     <div class="pic_text_below">&euro; <%= sPrice %></div>
                                 <% } %>

@@ -101,10 +101,12 @@
                                             String sISBN = rs.getString("isbn");
                                             // show the value for the title, author and price
                                             String descr = rs.getString("descr");
-                                            out.print("<li><b>" + sTitle + "</b> von (Autor) " + sAuthor ); 
+                                            out.print("<li><b>" + sTitle + "</b> von (<b>Autor</b>) " + sAuthor ); 
                                             
                                             // if there is value for the price : show it
                                             if (sPrice != null && !sPrice.equalsIgnoreCase("")){
+                                                sPrice = sPrice.replace(".", ","); // the price is in the DB stored as a float
+                                                sPrice = LesenMethoden.addPoint(sPrice); // adding the comma after 1000 euros 
                                                 out.print(" (<b>Preis: </b>&euro;" + sPrice + ")" + "<br/>");
                                             }
                                                 
